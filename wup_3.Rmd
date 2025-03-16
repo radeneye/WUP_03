@@ -47,6 +47,18 @@ favstats(alcohol~Seat,data=ucdavis1)
   
 ## Inferential Tests
 
+```{r}
+model1 <- aov(alcohol~Seat,data=davisdata)
+summary.aov(model1)
+```
+
 ## Conclusions
+  We will reject the null hypothesis, because the probability of getting a result like this is 0.000116, which is significantly low.
+  
+```{r}
+#we specify the margins starting at the bottom and proceeding clockwise - thus 8.7 is the left side margin to hold the names of the factors
+par(mar = c(3, 8.7, 2, 2))
+plot(TukeyHSD(model1),las=2)
+```
 
-
+  Now that we have the box properly labeled, we can see that the 0 is only in the confidence interval between the front and the middle. However, 0 is not in the confidence interval between back and the middle nor the confidence interval between the back and the front. This tells us that the back row is statistically different from the front and middle rows. There is no statistical difference between the front and middle rows. This is a case where one category is statistically diffent from the other two that have no statistical differences.
