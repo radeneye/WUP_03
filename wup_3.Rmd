@@ -40,6 +40,11 @@ There are "bites" taking out of the boxplots. The instructor tells us that these
 
 ## Numerical Summarys 
 
+```{r}
+favstats(alcohol~Seat,data=ucdavis1)
+```
+  The Q1 of the back, front, and middle rows are all 0. The median for the front row is also 0. The Q3 of the back, front, and middle rows are 12.5, 2, and 4 respectively. The number of people in the back, front, and middle rows are 36, 40, and 89 respectively. The back row has the least amount of people. Most people are sitting in the middle row.
+  
 ## Inferential Tests
 
 ## Conclusions
