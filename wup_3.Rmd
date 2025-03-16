@@ -27,13 +27,16 @@ basicCN <- ggplot(davisdata,aes(y=alcohol,x=Seat))
 ```{r}
 basicCN + geom_boxplot()
 ```
-  
+
+The median number of drinks of the back row is higher than the third quartile of the people in the front and middle rows.
   
 ### get fancy  
 
 ```{r}
 basicCN + geom_boxplot(notch=TRUE,outlier.color = "red") + stat_boxplot(geom ='errorbar') + labs(title="Fancy notch boxplot \n with 2 lines")
 ```
+
+There are "bites" taking out of the boxplots. The instructor tells us that these "bites" actually represents the standard deviation - the amount of variation amongst the data. The back row drank large amounts of drinks, while the other two groups didn't drink nearly as much.
 
 ## Numerical Summarys 
 
